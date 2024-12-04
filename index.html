@@ -3,37 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <script>
-        // Redirect to the target URL
-        setTimeout(function() {
-            window.location.href = "https://www.geodesy.tu-darmstadt.de/fernerkundung/das_fachgebiet_fub/mitarbeiter_fub/fe_kontakt_details_117696.en.jsp";
-        }, 0000); // 3-second delay
-    </script>
+    <title>Redirecting to Jiwei Hou's Homepage</title>
+    <meta http-equiv="refresh" content="5; url=https://www.geodesy.tu-darmstadt.de/fernerkundung/das_fachgebiet_fub/mitarbeiter_fub/fe_kontakt_details_117696.en.jsp">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f9f9f9;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
             text-align: center;
-            margin-top: 20%;
         }
-        .message {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .link {
+        h1 {
             color: #2c3e50;
+            animation: fadeIn 2s ease-in;
+        }
+        p {
+            font-size: 18px;
+            margin: 15px 0;
+            animation: fadeIn 2s ease-in 1s;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
             text-decoration: underline;
+        }
+        .spinner {
+            margin-top: 20px;
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ecf0f1;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="message">
-        Redirecting to Jiwei Hou's personal webpage...
-    </div>
-    <div>
-        If you are not redirected automatically, <a class="link" href="https://www.geodesy.tu-darmstadt.de/fernerkundung/das_fachgebiet_fub/mitarbeiter_fub/fe_kontakt_details_117696.en.jsp">click here</a>.
-    </div>
+    <h1>Welcome!</h1>
+    <p>Thank you for visiting! I’m redirecting you to my personal homepage at the Remote Sensing and Image Analysis Research Group, TU Darmstadt.</p>
+    <p>Please hold on for a moment, and feel free to explore once you arrive. I’m excited to share more with you!</p>
+    <div class="spinner"></div>
+    <p>If the redirection doesn’t work, <a href="https://www.geodesy.tu-darmstadt.de/fernerkundung/das_fachgebiet_fub/mitarbeiter_fub/fe_kontakt_details_117696.en.jsp">click here</a>.</p>
 </body>
 </html>
